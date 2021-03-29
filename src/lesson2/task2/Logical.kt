@@ -48,7 +48,10 @@ fun daysInMonth(month: Int, year: Int): Int = TODO()
 fun circleInside(
     x1: Double, y1: Double, r1: Double,
     x2: Double, y2: Double, r2: Double
-): Boolean = TODO()
+): Boolean {
+    val s = kotlin.math.sqrt((x2-x1) * (x2-x1) + (y2-y1) * (y2-y1))
+    return r2 >= s + r1
+}
 
 /**
  * Средняя
